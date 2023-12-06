@@ -1,10 +1,8 @@
 #!/usr/bin/python3
 def square_matrix_simple(matrix=[]):
-    squared = []
-    for line in matrix:
-        squared.append([c**2 for c in line])
-    return squared
+    new_matrix = matrix.copy()
 
-after creating each files, cat 0-main.py and copy the code they gave as an example by using vi 0-mmain
+    for i in range(len(matrix)):
+        new_matrix[i] = list(map(lambda x: x**2, matrix[i]))
 
-then chmod u+x
+    return (new_matrix)
