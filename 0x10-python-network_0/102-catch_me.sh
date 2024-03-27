@@ -1,3 +1,3 @@
 #!/bin/bash
-# Script to catch the server's special response
-curl -sLX PUT "0.0.0.0:5000/catch_me" -H "Origin: You got me!" -d "user_id=98" --data-urlencode "email=test@example.com"
+# Makes a request to cause the server to respond with "You got me!"
+curl -s "0.0.0.0:5000/catch_me" -X PUT -H "Origin: HolbertonSchool" -d "user_id=98" -L
